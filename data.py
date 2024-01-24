@@ -7,6 +7,7 @@ import torch
 import torch.nn.functional as F
 from torch.nn import DataParallel
 from torch.utils.data import Dataset,DataLoader, random_split
+from utils.utils import extract_lfcc, extract_bfcc, extract_cqcc, extract_lpc, extract_mfcc, extract_mel, read
 
 import numpy as np
 
@@ -52,9 +53,12 @@ class ASVDataset(Dataset):
         audio_file = self.file_list[idx]
         file_path = os.path.join(self.dataset_dir, audio_file)
         
-        # Load the audio file with soundfile and convert to tensor
-        feature, _ = sf.read(file_path)
-        feature_tensors = torch.tensor(feature, dtype=torch.float32)
+        #extract feature
+        sr, y = read(file_path)
+        feature = extract_lfcc(y, sr)
+
+        feature = np.resize(feature, (1, feature.shape[0], feature.shape[1]))
+        feature_tensors = torch.tensor(feature, dtype=torch.float32)   
         
         # Convert label to tensor; 1 if "spoof" else 0
         label = 1 if self.label_list[idx] == "spoof" else 0
@@ -66,6 +70,8 @@ class ASVDataset(Dataset):
         """pad the time series 1D"""
         # pad to max length
         max_width = max(features.shape[0] for features, _ in batch)
+        max_height = max(features.shape[1] for features, _ in batch if features.ndim > 1)
+
         padded_batch_features = []
         for features, _ in batch:
             # Convert to mono if the input is stereo
@@ -73,7 +79,8 @@ class ASVDataset(Dataset):
                 features = torch.mean(features, dim=1)  # Average the two channels
 
             pad_width = max_width - features.shape[0]
-            padded_features = F.pad(features, (0, pad_width), mode='constant', value=0)
+            pad_height = max_height - features.shape[1] if features.ndim > 1 else 0
+            padded_features = F.pad(features, (0, pad_width, 0, pad_height), mode='constant', value=0)
             padded_batch_features.append(padded_features.unsqueeze(0))
             
         labels = torch.tensor([label for _, label in batch], dtype=torch.int64)
@@ -96,10 +103,12 @@ class ASVDataset(Dataset):
         padded_batch_features = torch.stack(padded_batch_features, dim=0)
         return padded_batch_features, labels
     
+
 def get_dataloader(protocol_file, dataset_dir, batch_size, dev=False, eval=False):
     """return dataloader for training and evaluation
     """
     dataset = ASVDataset(protocol_file, dataset_dir, dev=dev, eval=eval)
+
     if dev or eval:
         dataloader = DataLoader(dataset, batch_size=batch_size, shuffle=False, collate_fn=dataset.collate_fn)
     else:
