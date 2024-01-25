@@ -1,12 +1,12 @@
 model:
   optimizer : 'adadelta' # adadelta adam SGD
   lr : 0.00001 # to do : adaptive lr
-  epochs : 20
+  epochs : 1000
   epoch : 1
   momentum : 0.9 # for SGD
 
   iteration : 0
-  patience : 5 # for early stopping
+  patience : 25 # for early stopping
   log_interval : 10
 
   seed : 1234  # random seed
