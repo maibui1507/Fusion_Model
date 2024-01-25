@@ -1,3 +1,4 @@
+import __future__
 import os
 import argparse
 import librosa
@@ -15,7 +16,7 @@ ___author__ = "Long Nguyen-Vu"
 __email__ = "long@ssu.ac.kr"
 
 class ASVDataset(Dataset):
-    def __init__(self, protocol_file, dataset_dir, dev = False, eval=False):
+    def __init__(self, protocol_file, dataset_dir, feature_dir, dev = False, eval=False):
         """
         protocol_file: 
             example: `/datab/Dataset/cnsl_real_fake_audio/supcon_cnsl_jan22/protocol.txt`
@@ -26,6 +27,7 @@ class ASVDataset(Dataset):
         """
         self.protocol_file = protocol_file
         self.dataset_dir = dataset_dir
+        self.feature_dir = feature_dir
         self.file_list = []
         self.label_list = []
         self.dev = dev  
@@ -53,9 +55,17 @@ class ASVDataset(Dataset):
         audio_file = self.file_list[idx]
         file_path = os.path.join(self.dataset_dir, audio_file)
         
-        #extract feature
-        sr, y = read(file_path)
-        feature = extract_lfcc(y, sr)
+        # Check if the feature file already exists
+        feature_file = os.path.join(self.feature_dir, audio_file.split("/")[-1].split(".")[0] + '.npy')
+        if os.path.exists(feature_file):
+            # Load the feature from the file
+            feature = np.load(feature_file)
+        else:
+            # Extract feature
+            sr, y = read(file_path)
+            feature = extract_lfcc(y, sr)
+            # Save the feature to a file
+            np.save(feature_file, feature)
 
         feature = np.resize(feature, (1, feature.shape[0], feature.shape[1]))
         feature_tensors = torch.tensor(feature, dtype=torch.float32)   
@@ -104,32 +114,32 @@ class ASVDataset(Dataset):
         return padded_batch_features, labels
     
 
-def get_dataloader(protocol_file, dataset_dir, batch_size, dev=False, eval=False):
+def get_dataloader(protocol_file, dataset_dir, feature_dir, batch_size,  dev=False, eval=False):
     """return dataloader for training and evaluation
     """
-    dataset = ASVDataset(protocol_file, dataset_dir, dev=dev, eval=eval)
+    dataset = ASVDataset(protocol_file, dataset_dir, feature_dir, dev=dev, eval=eval)
 
     if dev or eval:
-        dataloader = DataLoader(dataset, batch_size=batch_size, shuffle=False, collate_fn=dataset.collate_fn)
+        dataloader = DataLoader(dataset, batch_size=batch_size, shuffle=False, collate_fn=dataset.collate_fn, pin_memory=True)
     else:
-        dataloader = DataLoader(dataset, batch_size=batch_size, shuffle=True, collate_fn=dataset.collate_fn)
+        dataloader = DataLoader(dataset, batch_size=batch_size, shuffle=True, collate_fn=dataset.collate_fn, pin_memory=True)
     return dataloader
 
 def test_dataloader():
     ap = argparse.ArgumentParser()
     ap.add_argument("--protocol_file", type=str, default="/datab/Dataset/cnsl_real_fake_audio/supcon_cnsl_jan22/protocol.txt")
     ap.add_argument("--dataset_dir", type=str, default="/datab/Dataset/cnsl_real_fake_audio/supcon_cnsl_jan22/")
+    ap.add_argument("--feature_dir", type=str, default="/datab/Dataset/cnsl_real_fake_audio/features_supcon_cnsl_jan22/lfcc")
     ap.add_argument("--batch_size", type=int, default=1)
     ap.add_argument("--dev", action="store_true")
     ap.add_argument("--eval", action="store_true")
     args = ap.parse_args()
     
     print("Test dataloader")
-    train_dataloader = get_dataloader(args.protocol_file, args.dataset_dir, args.batch_size, dev=args.dev, eval=args.eval)
-    dev_dataloader = get_dataloader(args.protocol_file, args.dataset_dir, args.batch_size, dev=True, eval=args.eval)
-    eval_dataloader = get_dataloader(args.protocol_file, args.dataset_dir, args.batch_size, dev=False, eval=True)
+    train_dataloader = get_dataloader(args.protocol_file, args.dataset_dir, args.feature_dir, args.batch_size, dev=args.dev, eval=args.eval)
+    dev_dataloader = get_dataloader(args.protocol_file, args.dataset_dir, args.feature_dir, args.batch_size, dev=True, eval=args.eval)
+    eval_dataloader = get_dataloader(args.protocol_file, args.dataset_dir, args.feature_dir, args.batch_size, dev=False, eval=True)
     
     # length of train, dev, eval
     print("Length of train, dev, eval")
     print(len(train_dataloader.dataset), len(dev_dataloader.dataset), len(eval_dataloader.dataset))
-    
