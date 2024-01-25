@@ -55,8 +55,8 @@ else:
 
 best_dev_loss = np.inf
 
-checkpoint_path = os.path.join('./checkpoint', f"{config['model']['arc']}.pth")
-
+# load pre-trained model
+checkpoint_path = os.path.join('./checkpoint', f"{config['model']['arc']}_lfcc.pth")
 if os.path.isfile(checkpoint_path):
     state = torch.load(checkpoint_path)
     print(f'Load pre-trained model of {config["model"]["arc"]}\n')
@@ -76,7 +76,6 @@ while (epoch < epochs + 1) and (iteration < patience):
 
     train_loss = test(train_dataloader, model, True, mode='Train loss')
     dev_loss = test(dev_dataloader, model, True, mode='dev loss')
-    eval_loss  = test(eval_dataloader, model, True, mode='Test loss')
 
     if dev_loss > best_dev_loss:
         iteration += 1
@@ -90,10 +89,16 @@ while (epoch < epochs + 1) and (iteration < patience):
             'acc': dev_loss,
             'epoch': epoch,
         }
+        checkpoint_path = os.path.join('./checkpoint', f"{config['model']['arc']}_lfcc_epoch{epoch}.pth")
         if not os.path.isdir('checkpoint'):
             os.mkdir('checkpoint')
         torch.save(state, checkpoint_path)
 
     epoch += 1
+
+print('Finish Training!!')
+
+#evaluate
+eval_loss  = test(eval_dataloader, model, True, mode='Test loss')
 
 print('Finished!!')

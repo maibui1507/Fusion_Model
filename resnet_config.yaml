@@ -1,7 +1,7 @@
 model:
   optimizer : 'adadelta' # adadelta adam SGD
-  lr : 0.001 # to do : adaptive lr
-  epochs : 1000
+  lr : 0.00001 # to do : adaptive lr
+  epochs : 20
   epoch : 1
   momentum : 0.9 # for SGD
 
@@ -10,8 +10,8 @@ model:
   log_interval : 10
 
   seed : 1234  # random seed
-  batch_size : 20 #100
-  test_batch_size: 10
+  batch_size : 64 
+  test_batch_size: 64
   arc : 'ResNet'
 
   #sound setting

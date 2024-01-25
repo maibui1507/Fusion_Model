@@ -1,0 +1,862 @@
+[
+    {
+        "label": "torch.nn",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "torch.nn",
+        "description": "torch.nn",
+        "detail": "torch.nn",
+        "documentation": {}
+    },
+    {
+        "label": "DataParallel",
+        "importPath": "torch.nn",
+        "description": "torch.nn",
+        "isExtraImport": true,
+        "detail": "torch.nn",
+        "documentation": {}
+    },
+    {
+        "label": "torch.nn.functional",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "torch.nn.functional",
+        "description": "torch.nn.functional",
+        "detail": "torch.nn.functional",
+        "documentation": {}
+    },
+    {
+        "label": "math",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "math",
+        "description": "math",
+        "detail": "math",
+        "documentation": {}
+    },
+    {
+        "label": "torch.utils.model_zoo",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "torch.utils.model_zoo",
+        "description": "torch.utils.model_zoo",
+        "detail": "torch.utils.model_zoo",
+        "documentation": {}
+    },
+    {
+        "label": "torch",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "torch",
+        "description": "torch",
+        "detail": "torch",
+        "documentation": {}
+    },
+    {
+        "label": "numpy",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "numpy",
+        "description": "numpy",
+        "detail": "numpy",
+        "documentation": {}
+    },
+    {
+        "label": "torchvision.transforms",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "torchvision.transforms",
+        "description": "torchvision.transforms",
+        "detail": "torchvision.transforms",
+        "documentation": {}
+    },
+    {
+        "label": "ssq_cwt",
+        "importPath": "ssqueezepy",
+        "description": "ssqueezepy",
+        "isExtraImport": true,
+        "detail": "ssqueezepy",
+        "documentation": {}
+    },
+    {
+        "label": "read",
+        "importPath": "scipy.io.wavfile",
+        "description": "scipy.io.wavfile",
+        "isExtraImport": true,
+        "detail": "scipy.io.wavfile",
+        "documentation": {}
+    },
+    {
+        "label": "lfcc",
+        "importPath": "spafe.features.lfcc",
+        "description": "spafe.features.lfcc",
+        "isExtraImport": true,
+        "detail": "spafe.features.lfcc",
+        "documentation": {}
+    },
+    {
+        "label": "lpc",
+        "importPath": "spafe.features.lpc",
+        "description": "spafe.features.lpc",
+        "isExtraImport": true,
+        "detail": "spafe.features.lpc",
+        "documentation": {}
+    },
+    {
+        "label": "lpcc",
+        "importPath": "spafe.features.lpc",
+        "description": "spafe.features.lpc",
+        "isExtraImport": true,
+        "detail": "spafe.features.lpc",
+        "documentation": {}
+    },
+    {
+        "label": "bfcc",
+        "importPath": "spafe.features.bfcc",
+        "description": "spafe.features.bfcc",
+        "isExtraImport": true,
+        "detail": "spafe.features.bfcc",
+        "documentation": {}
+    },
+    {
+        "label": "cqcc",
+        "importPath": "spafe.features.cqcc",
+        "description": "spafe.features.cqcc",
+        "isExtraImport": true,
+        "detail": "spafe.features.cqcc",
+        "documentation": {}
+    },
+    {
+        "label": "mfcc",
+        "importPath": "spafe.features.mfcc",
+        "description": "spafe.features.mfcc",
+        "isExtraImport": true,
+        "detail": "spafe.features.mfcc",
+        "documentation": {}
+    },
+    {
+        "label": "mel_spectrogram",
+        "importPath": "spafe.features.mfcc",
+        "description": "spafe.features.mfcc",
+        "isExtraImport": true,
+        "detail": "spafe.features.mfcc",
+        "documentation": {}
+    },
+    {
+        "label": "SlidingWindow",
+        "importPath": "spafe.utils.preprocessing",
+        "description": "spafe.utils.preprocessing",
+        "isExtraImport": true,
+        "detail": "spafe.utils.preprocessing",
+        "documentation": {}
+    },
+    {
+        "label": "show_features",
+        "importPath": "spafe.utils.vis",
+        "description": "spafe.utils.vis",
+        "isExtraImport": true,
+        "detail": "spafe.utils.vis",
+        "documentation": {}
+    },
+    {
+        "label": "pywt",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "pywt",
+        "description": "pywt",
+        "detail": "pywt",
+        "documentation": {}
+    },
+    {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "argparse",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "argparse",
+        "description": "argparse",
+        "detail": "argparse",
+        "documentation": {}
+    },
+    {
+        "label": "librosa",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "librosa",
+        "description": "librosa",
+        "detail": "librosa",
+        "documentation": {}
+    },
+    {
+        "label": "soundfile",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "soundfile",
+        "description": "soundfile",
+        "detail": "soundfile",
+        "documentation": {}
+    },
+    {
+        "label": "Dataset",
+        "importPath": "torch.utils.data",
+        "description": "torch.utils.data",
+        "isExtraImport": true,
+        "detail": "torch.utils.data",
+        "documentation": {}
+    },
+    {
+        "label": "DataLoader",
+        "importPath": "torch.utils.data",
+        "description": "torch.utils.data",
+        "isExtraImport": true,
+        "detail": "torch.utils.data",
+        "documentation": {}
+    },
+    {
+        "label": "random_split",
+        "importPath": "torch.utils.data",
+        "description": "torch.utils.data",
+        "isExtraImport": true,
+        "detail": "torch.utils.data",
+        "documentation": {}
+    },
+    {
+        "label": "extract_lfcc",
+        "importPath": "utils.utils",
+        "description": "utils.utils",
+        "isExtraImport": true,
+        "detail": "utils.utils",
+        "documentation": {}
+    },
+    {
+        "label": "extract_bfcc",
+        "importPath": "utils.utils",
+        "description": "utils.utils",
+        "isExtraImport": true,
+        "detail": "utils.utils",
+        "documentation": {}
+    },
+    {
+        "label": "extract_cqcc",
+        "importPath": "utils.utils",
+        "description": "utils.utils",
+        "isExtraImport": true,
+        "detail": "utils.utils",
+        "documentation": {}
+    },
+    {
+        "label": "extract_lpc",
+        "importPath": "utils.utils",
+        "description": "utils.utils",
+        "isExtraImport": true,
+        "detail": "utils.utils",
+        "documentation": {}
+    },
+    {
+        "label": "extract_mfcc",
+        "importPath": "utils.utils",
+        "description": "utils.utils",
+        "isExtraImport": true,
+        "detail": "utils.utils",
+        "documentation": {}
+    },
+    {
+        "label": "extract_mel",
+        "importPath": "utils.utils",
+        "description": "utils.utils",
+        "isExtraImport": true,
+        "detail": "utils.utils",
+        "documentation": {}
+    },
+    {
+        "label": "read",
+        "importPath": "utils.utils",
+        "description": "utils.utils",
+        "isExtraImport": true,
+        "detail": "utils.utils",
+        "documentation": {}
+    },
+    {
+        "label": "print_function",
+        "importPath": "__future__",
+        "description": "__future__",
+        "isExtraImport": true,
+        "detail": "__future__",
+        "documentation": {}
+    },
+    {
+        "label": "print_function",
+        "importPath": "__future__",
+        "description": "__future__",
+        "isExtraImport": true,
+        "detail": "__future__",
+        "documentation": {}
+    },
+    {
+        "label": "torch.optim",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "torch.optim",
+        "description": "torch.optim",
+        "detail": "torch.optim",
+        "documentation": {}
+    },
+    {
+        "label": "ResNet",
+        "importPath": "model.resnet",
+        "description": "model.resnet",
+        "isExtraImport": true,
+        "detail": "model.resnet",
+        "documentation": {}
+    },
+    {
+        "label": "BasicBlock",
+        "importPath": "model.resnet",
+        "description": "model.resnet",
+        "isExtraImport": true,
+        "detail": "model.resnet",
+        "documentation": {}
+    },
+    {
+        "label": "resnet34",
+        "importPath": "model.resnet",
+        "description": "model.resnet",
+        "isExtraImport": true,
+        "detail": "model.resnet",
+        "documentation": {}
+    },
+    {
+        "label": "train",
+        "importPath": "train",
+        "description": "train",
+        "isExtraImport": true,
+        "detail": "train",
+        "documentation": {}
+    },
+    {
+        "label": "test",
+        "importPath": "train",
+        "description": "train",
+        "isExtraImport": true,
+        "detail": "train",
+        "documentation": {}
+    },
+    {
+        "label": "get_dataloader",
+        "importPath": "data",
+        "description": "data",
+        "isExtraImport": true,
+        "detail": "data",
+        "documentation": {}
+    },
+    {
+        "label": "yaml",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "yaml",
+        "description": "yaml",
+        "detail": "yaml",
+        "documentation": {}
+    },
+    {
+        "label": "Variable",
+        "importPath": "torch.autograd",
+        "description": "torch.autograd",
+        "isExtraImport": true,
+        "detail": "torch.autograd",
+        "documentation": {}
+    },
+    {
+        "label": "BasicBlock",
+        "kind": 6,
+        "importPath": "model.resnet",
+        "description": "model.resnet",
+        "peekOfCode": "class BasicBlock(nn.Module):\n    expansion = 1\n    def __init__(self, inplanes, planes, stride=1, downsample=None):\n        super(BasicBlock, self).__init__()\n        self.conv1 = conv3x3(inplanes, planes, stride)\n        self.bn1 = nn.BatchNorm2d(planes)\n        self.relu = nn.ReLU(inplace=True)\n        self.conv2 = conv3x3(planes, planes)\n        self.bn2 = nn.BatchNorm2d(planes)\n        self.downsample = downsample",
+        "detail": "model.resnet",
+        "documentation": {}
+    },
+    {
+        "label": "Bottleneck",
+        "kind": 6,
+        "importPath": "model.resnet",
+        "description": "model.resnet",
+        "peekOfCode": "class Bottleneck(nn.Module):\n    expansion = 4\n    def __init__(self, inplanes, planes, stride=1, downsample=None):\n        super(Bottleneck, self).__init__()\n        self.conv1 = nn.Conv2d(inplanes, planes, kernel_size=1, bias=False)\n        self.bn1 = nn.BatchNorm2d(planes)\n        self.conv2 = nn.Conv2d(planes, planes, kernel_size=3, stride=stride,\n                               padding=1, bias=False)\n        self.bn2 = nn.BatchNorm2d(planes)\n        self.conv3 = nn.Conv2d(planes, planes * self.expansion, kernel_size=1, bias=False)",
+        "detail": "model.resnet",
+        "documentation": {}
+    },
+    {
+        "label": "ResNet",
+        "kind": 6,
+        "importPath": "model.resnet",
+        "description": "model.resnet",
+        "peekOfCode": "class ResNet(nn.Module):\n    def __init__(self, block, layers, num_classes=2):\n        self.inplanes = 64\n        super(ResNet, self).__init__()\n        self.conv1 = nn.Conv2d(1, 64, kernel_size=7, stride=2, padding=3, bias=False)\n        self.bn1 = nn.BatchNorm2d(64)\n        self.relu = nn.ReLU(inplace=True)\n        self.maxpool = nn.MaxPool2d(kernel_size=3, stride=2, padding=1)\n        self.layer1 = self._make_layer(block, 64, layers[0])\n        self.layer2 = self._make_layer(block, 128, layers[1], stride=2)",
+        "detail": "model.resnet",
+        "documentation": {}
+    },
+    {
+        "label": "conv3x3",
+        "kind": 2,
+        "importPath": "model.resnet",
+        "description": "model.resnet",
+        "peekOfCode": "def conv3x3(in_planes, out_planes, stride=1):\n    \"\"\"3x3 convolution with padding\"\"\"\n    return nn.Conv2d(in_planes, out_planes, kernel_size=3, stride=stride,\n                     padding=1, bias=False)\nclass BasicBlock(nn.Module):\n    expansion = 1\n    def __init__(self, inplanes, planes, stride=1, downsample=None):\n        super(BasicBlock, self).__init__()\n        self.conv1 = conv3x3(inplanes, planes, stride)\n        self.bn1 = nn.BatchNorm2d(planes)",
+        "detail": "model.resnet",
+        "documentation": {}
+    },
+    {
+        "label": "resnet18",
+        "kind": 2,
+        "importPath": "model.resnet",
+        "description": "model.resnet",
+        "peekOfCode": "def resnet18(pretrained=False, **kwargs):\n    \"\"\"Constructs a ResNet-18 model.\n    Args:\n        pretrained (bool): If True, returns a model pre-trained on ImageNet\n    \"\"\"\n    model = ResNet(BasicBlock, [2, 2, 2, 2], **kwargs)\n    if pretrained:\n        model.load_state_dict(model_zoo.load_url(model_urls['resnet18']))\n    return model\ndef resnet34(pretrained=False, **kwargs):",
+        "detail": "model.resnet",
+        "documentation": {}
+    },
+    {
+        "label": "resnet34",
+        "kind": 2,
+        "importPath": "model.resnet",
+        "description": "model.resnet",
+        "peekOfCode": "def resnet34(pretrained=False, **kwargs):\n    \"\"\"Constructs a ResNet-34 model.\n    Args:\n        pretrained (bool): If True, returns a model pre-trained on ImageNet\n    \"\"\"\n    model = ResNet(BasicBlock, [3, 4, 6, 3], num_classes = 2, **kwargs)\n    if pretrained:\n        model.load_state_dict(model_zoo.load_url(model_urls['resnet34']))\n    return model\ndef resnet50(pretrained=False, **kwargs):",
+        "detail": "model.resnet",
+        "documentation": {}
+    },
+    {
+        "label": "resnet50",
+        "kind": 2,
+        "importPath": "model.resnet",
+        "description": "model.resnet",
+        "peekOfCode": "def resnet50(pretrained=False, **kwargs):\n    \"\"\"Constructs a ResNet-50 model.\n    Args:\n        pretrained (bool): If True, returns a model pre-trained on ImageNet\n    \"\"\"\n    model = ResNet(Bottleneck, [3, 4, 6, 3], **kwargs)\n    if pretrained:\n        model.load_state_dict(model_zoo.load_url(model_urls['resnet50']))\n    return model\ndef resnet101(pretrained=False, **kwargs):",
+        "detail": "model.resnet",
+        "documentation": {}
+    },
+    {
+        "label": "resnet101",
+        "kind": 2,
+        "importPath": "model.resnet",
+        "description": "model.resnet",
+        "peekOfCode": "def resnet101(pretrained=False, **kwargs):\n    \"\"\"Constructs a ResNet-101 model.\n    Args:\n        pretrained (bool): If True, returns a model pre-trained on ImageNet\n    \"\"\"\n    model = ResNet(Bottleneck, [3, 4, 23, 3], **kwargs)\n    if pretrained:\n        model.load_state_dict(model_zoo.load_url(model_urls['resnet101']))\n    return model\ndef resnet152(pretrained=False, **kwargs):",
+        "detail": "model.resnet",
+        "documentation": {}
+    },
+    {
+        "label": "resnet152",
+        "kind": 2,
+        "importPath": "model.resnet",
+        "description": "model.resnet",
+        "peekOfCode": "def resnet152(pretrained=False, **kwargs):\n    \"\"\"Constructs a ResNet-152 model.\n    Args:\n        pretrained (bool): If True, returns a model pre-trained on ImageNet\n    \"\"\"\n    model = ResNet(Bottleneck, [3, 8, 36, 3], **kwargs)\n    if pretrained:\n        model.load_state_dict(model_zoo.load_url(model_urls['resnet152']))\n    return model",
+        "detail": "model.resnet",
+        "documentation": {}
+    },
+    {
+        "label": "__all__",
+        "kind": 5,
+        "importPath": "model.resnet",
+        "description": "model.resnet",
+        "peekOfCode": "__all__ = ['ResNet', 'resnet18', 'resnet34', 'resnet50', 'resnet101', 'resnet152']\nmodel_urls = {\n    'resnet18': 'https://download.pytorch.org/models/resnet18-5c106cde.pth',\n    'resnet34': 'https://download.pytorch.org/models/resnet34-333f7ec4.pth',\n    'resnet50': 'https://download.pytorch.org/models/resnet50-19c8e357.pth',\n    'resnet101': 'https://download.pytorch.org/models/resnet101-5d3b4d8f.pth',\n    'resnet152': 'https://download.pytorch.org/models/resnet152-b121ed2d.pth',\n}\ndef conv3x3(in_planes, out_planes, stride=1):\n    \"\"\"3x3 convolution with padding\"\"\"",
+        "detail": "model.resnet",
+        "documentation": {}
+    },
+    {
+        "label": "model_urls",
+        "kind": 5,
+        "importPath": "model.resnet",
+        "description": "model.resnet",
+        "peekOfCode": "model_urls = {\n    'resnet18': 'https://download.pytorch.org/models/resnet18-5c106cde.pth',\n    'resnet34': 'https://download.pytorch.org/models/resnet34-333f7ec4.pth',\n    'resnet50': 'https://download.pytorch.org/models/resnet50-19c8e357.pth',\n    'resnet101': 'https://download.pytorch.org/models/resnet101-5d3b4d8f.pth',\n    'resnet152': 'https://download.pytorch.org/models/resnet152-b121ed2d.pth',\n}\ndef conv3x3(in_planes, out_planes, stride=1):\n    \"\"\"3x3 convolution with padding\"\"\"\n    return nn.Conv2d(in_planes, out_planes, kernel_size=3, stride=stride,",
+        "detail": "model.resnet",
+        "documentation": {}
+    },
+    {
+        "label": "extract_bfcc",
+        "kind": 2,
+        "importPath": "utils.utils",
+        "description": "utils.utils",
+        "peekOfCode": "def extract_bfcc(y, sr):\n    lfccs  = bfcc(y,\n                fs=sr,\n                pre_emph=1,\n                pre_emph_coeff=0.97,\n                window=SlidingWindow(0.03, 0.015, \"hamming\"),\n                nfilts=1024,\n                nfft=2048,\n                low_freq=0,\n                high_freq=8000,",
+        "detail": "utils.utils",
+        "documentation": {}
+    },
+    {
+        "label": "extract_cqcc",
+        "kind": 2,
+        "importPath": "utils.utils",
+        "description": "utils.utils",
+        "peekOfCode": "def extract_cqcc(y, sr):\n    cqccs  = cqcc(y,\n                  fs=sr,\n                  pre_emph=1,\n                  pre_emph_coeff=0.97,\n                  window=SlidingWindow(0.03, 0.015, \"hamming\"),\n                  nfft=2048,\n                  low_freq=0,\n                  high_freq=8000,\n                  normalize=\"mvn\")",
+        "detail": "utils.utils",
+        "documentation": {}
+    },
+    {
+        "label": "extract_lpc",
+        "kind": 2,
+        "importPath": "utils.utils",
+        "description": "utils.utils",
+        "peekOfCode": "def extract_lpc(y, sr):\n    lpccs = lpcc(y,\n             fs=sr,\n             pre_emph=0,\n             pre_emph_coeff=0.97,\n             window=SlidingWindow(0.03, 0.015, \"hamming\"))\n    return lpccs\ndef extract_mfcc(y, sr):\n    mfccs  = mfcc(y,\n              fs=sr,",
+        "detail": "utils.utils",
+        "documentation": {}
+    },
+    {
+        "label": "extract_mfcc",
+        "kind": 2,
+        "importPath": "utils.utils",
+        "description": "utils.utils",
+        "peekOfCode": "def extract_mfcc(y, sr):\n    mfccs  = mfcc(y,\n              fs=sr,\n              pre_emph=1,\n              pre_emph_coeff=0.97,\n              window=SlidingWindow(0.03, 0.015, \"hamming\"),\n              nfilts=1024,\n              nfft=2048,\n              low_freq=0,\n              high_freq=8000,",
+        "detail": "utils.utils",
+        "documentation": {}
+    },
+    {
+        "label": "extract_mel",
+        "kind": 2,
+        "importPath": "utils.utils",
+        "description": "utils.utils",
+        "peekOfCode": "def extract_mel(y, sr):\n    mels = mel_spectrogram(y,\n              sr=sr,\n              pre_emph=1,\n              pre_emph_coeff=0.97,\n              window=SlidingWindow(0.03, 0.015, \"hamming\"),\n              nfilts=1024,\n              nfft=2048,\n              low_freq=0,\n              high_freq=8000)",
+        "detail": "utils.utils",
+        "documentation": {}
+    },
+    {
+        "label": "extract_ssqcwt",
+        "kind": 2,
+        "importPath": "utils.utils",
+        "description": "utils.utils",
+        "peekOfCode": "def extract_ssqcwt(y, sr = 16000):\n    Twxo, Wxo, *_ = ssq_cwt(y, wavelet=\"morlet\")\n    return Wxo\ndef extract_cwt(y, sr = 16000):\n    wavelet = 'morl' # wavelet type: morlet\n    # scales for morlet wavelet\n    widths = np.arange(1, 301, 1)\n    # sampling period, timestep difference\n    dt = 1/16000\n    frequencies = pywt.scale2frequency(wavelet, widths) / dt # Get frequencies corresponding to scales",
+        "detail": "utils.utils",
+        "documentation": {}
+    },
+    {
+        "label": "extract_cwt",
+        "kind": 2,
+        "importPath": "utils.utils",
+        "description": "utils.utils",
+        "peekOfCode": "def extract_cwt(y, sr = 16000):\n    wavelet = 'morl' # wavelet type: morlet\n    # scales for morlet wavelet\n    widths = np.arange(1, 301, 1)\n    # sampling period, timestep difference\n    dt = 1/16000\n    frequencies = pywt.scale2frequency(wavelet, widths) / dt # Get frequencies corresponding to scales\n    wavelet_coeffs, freqs = pywt.cwt(y, widths, wavelet = wavelet, sampling_period=dt)\n    # print(\"Shape of wavelet transform: \", wavelet_coeffs.shape)\n    return wavelet_coeffs",
+        "detail": "utils.utils",
+        "documentation": {}
+    },
+    {
+        "label": "extract_cwt_example",
+        "kind": 2,
+        "importPath": "utils.utils",
+        "description": "utils.utils",
+        "peekOfCode": "def extract_cwt_example():\n    fpath = \"CON_T_0010584.wav\"\n    fs, sig = read(fpath)\n    y = sig\n    sr = fs\n    wavelet = 'morl' # wavelet type: morlet\n    widths = np.arange(10,90) # scales for morlet wavelet\n    widths = np.concatenate((np.linspace(1,10,91), widths, np.linspace(90,100,5)))\n    dt = 1/sr # timestep difference\n    frequencies = pywt.scale2frequency(wavelet, widths) / dt # Get frequencies corresponding to scales",
+        "detail": "utils.utils",
+        "documentation": {}
+    },
+    {
+        "label": "extract_ssq_cwt",
+        "kind": 2,
+        "importPath": "utils.utils",
+        "description": "utils.utils",
+        "peekOfCode": "def extract_ssq_cwt(y):\n    Twxo, Wxo, *_ = ssq_cwt(y, wavelet=\"morlet\", mu=0)\n    return Wxo\ndef extract_ssq_cwt_example():\n    # read audio\n    fpath = \"CON_T_0010584.wav\"\n    fs, sig = read(fpath)\n    print(\"sig shape: \", sig.shape)\n    # compute ssq_cwt\n    Twxo, Wxo, *_ = ssq_cwt(sig)",
+        "detail": "utils.utils",
+        "documentation": {}
+    },
+    {
+        "label": "extract_ssq_cwt_example",
+        "kind": 2,
+        "importPath": "utils.utils",
+        "description": "utils.utils",
+        "peekOfCode": "def extract_ssq_cwt_example():\n    # read audio\n    fpath = \"CON_T_0010584.wav\"\n    fs, sig = read(fpath)\n    print(\"sig shape: \", sig.shape)\n    # compute ssq_cwt\n    Twxo, Wxo, *_ = ssq_cwt(sig)\n    print(\"Wxo shape: \", Wxo.shape)\ndef extract_lfcc(y, sr):\n    lfccs  = lfcc(y,",
+        "detail": "utils.utils",
+        "documentation": {}
+    },
+    {
+        "label": "extract_lfcc",
+        "kind": 2,
+        "importPath": "utils.utils",
+        "description": "utils.utils",
+        "peekOfCode": "def extract_lfcc(y, sr):\n    lfccs  = lfcc(y,\n                fs=sr,\n                pre_emph=1,\n                pre_emph_coeff=0.97,\n                window=SlidingWindow(0.03, 0.015, \"hamming\"),\n                nfilts=128,\n                nfft=2048,\n                low_freq=0,\n                high_freq=8000,",
+        "detail": "utils.utils",
+        "documentation": {}
+    },
+    {
+        "label": "extract_lfcc_example",
+        "kind": 2,
+        "importPath": "utils.utils",
+        "description": "utils.utils",
+        "peekOfCode": "def extract_lfcc_example():\n    # read audio\n    fpath = \"/home/maibui/audio_augmentor/output_noise.wav\"\n    fs, sig = read(fpath)\n    print(\"sig shape: \", sig.shape)\n    # compute lfccs\n    # lfccs  = lfcc(sig,\n    #             fs=fs,\n    #             pre_emph=1,\n    #             pre_emph_coeff=0.97,",
+        "detail": "utils.utils",
+        "documentation": {}
+    },
+    {
+        "label": "extract_spectrogram",
+        "kind": 2,
+        "importPath": "utils.utils",
+        "description": "utils.utils",
+        "peekOfCode": "def extract_spectrogram(y, sr):\n    pass\ndef extract_lpcs(y, sr):\n    # compute lpcs\n    lpcs, _ = lpc(sig=y,\n                fs=sr,\n                pre_emph=0,\n                pre_emph_coeff=0.97,\n                window=SlidingWindow(0.030, 0.015, \"hamming\"))\n    return lpcs",
+        "detail": "utils.utils",
+        "documentation": {}
+    },
+    {
+        "label": "extract_lpcs",
+        "kind": 2,
+        "importPath": "utils.utils",
+        "description": "utils.utils",
+        "peekOfCode": "def extract_lpcs(y, sr):\n    # compute lpcs\n    lpcs, _ = lpc(sig=y,\n                fs=sr,\n                pre_emph=0,\n                pre_emph_coeff=0.97,\n                window=SlidingWindow(0.030, 0.015, \"hamming\"))\n    return lpcs\ndef extract_lpcs_example():\n    # read audio",
+        "detail": "utils.utils",
+        "documentation": {}
+    },
+    {
+        "label": "extract_lpcs_example",
+        "kind": 2,
+        "importPath": "utils.utils",
+        "description": "utils.utils",
+        "peekOfCode": "def extract_lpcs_example():\n    # read audio\n    fpath = \"CON_T_0010584.wav\"\n    fs, sig = read(fpath)\n    print(\"sig shape: \", sig.shape)\n    # compute lfccs\n    lpcs, _ = lpc(sig,\n                fs=fs,\n                pre_emph=0,\n                pre_emph_coeff=0.97,",
+        "detail": "utils.utils",
+        "documentation": {}
+    },
+    {
+        "label": "pad_to_dense_1d",
+        "kind": 2,
+        "importPath": "utils.utils",
+        "description": "utils.utils",
+        "peekOfCode": "def pad_to_dense_1d(M):\n    \"\"\"Appends the minimal required amount of zeroes at the end of each \n     array in the jagged array `M`, such that `M` looses its jagedness.\"\"\"\n    maxlen = max(len(r) for r in M)\n    Z = np.zeros((len(M), maxlen))\n    for enu, row in enumerate(M):\n        Z[enu, :len(row)] += row \n    return Z\n# def pad_to_dense_2d(jagged_array):\n#     # Find the maximum number of rows among all 2D arrays in jagged_array",
+        "detail": "utils.utils",
+        "documentation": {}
+    },
+    {
+        "label": "pad_to_dense_2d",
+        "kind": 2,
+        "importPath": "utils.utils",
+        "description": "utils.utils",
+        "peekOfCode": "def pad_to_dense_2d(jagged_array):\n    # Find the maximum number of columns among all 2D arrays in jagged_array\n    max_num_columns = max(arr.shape[1] for arr in jagged_array)\n    num_rows = jagged_array[0].shape[0]  # Number of rows in each 2D array\n    # Create a new 2D array with dimensions (len(jagged_array), num_rows, max_num_columns)\n    padded_array = np.zeros((len(jagged_array), num_rows, max_num_columns))\n    # Copy the elements from each 2D array in jagged_array to the corresponding column in padded_array\n    for i, arr in enumerate(jagged_array):\n        padded_array[i, :, :arr.shape[1]] = arr\n    return padded_array   ",
+        "detail": "utils.utils",
+        "documentation": {}
+    },
+    {
+        "label": "normalize_dataset",
+        "kind": 2,
+        "importPath": "utils.utils",
+        "description": "utils.utils",
+        "peekOfCode": "def normalize_dataset(dataset):\n    # Calculate mean and standard deviation for the entire dataset\n    mean = torch.mean(dataset)\n    std = torch.std(dataset)\n    # Define the normalization transform\n    normalize = transforms.Normalize(mean=mean, std=std)\n    # Create a tensor of ones with the same shape as the dataset\n    ones = torch.ones_like(dataset)\n    # Apply the normalization transform to the ones tensor to get the scaling factor\n    scaling_factor = normalize(ones)",
+        "detail": "utils.utils",
+        "documentation": {}
+    },
+    {
+        "label": "ASVDataset",
+        "kind": 6,
+        "importPath": "data",
+        "description": "data",
+        "peekOfCode": "class ASVDataset(Dataset):\n    def __init__(self, protocol_file, dataset_dir, dev = False, eval=False):\n        \"\"\"\n        protocol_file: \n            example: `/datab/Dataset/cnsl_real_fake_audio/supcon_cnsl_jan22/protocol.txt`\n            bonafide/LA_T_3424442.wav train - bonafide\n            vocoded/hifigan_LA_T_3424442.wav train - spoof\n        dataset_dir: directory of the dataset\n            example: `/datab/Dataset/cnsl_real_fake_audio/supcon_cnsl_jan22/`\n        \"\"\"",
+        "detail": "data",
+        "documentation": {}
+    },
+    {
+        "label": "get_dataloader",
+        "kind": 2,
+        "importPath": "data",
+        "description": "data",
+        "peekOfCode": "def get_dataloader(protocol_file, dataset_dir, batch_size, dev=False, eval=False):\n    \"\"\"return dataloader for training and evaluation\n    \"\"\"\n    dataset = ASVDataset(protocol_file, dataset_dir, dev=dev, eval=eval)\n    if dev or eval:\n        dataloader = DataLoader(dataset, batch_size=batch_size, shuffle=False, collate_fn=dataset.collate_fn)\n    else:\n        dataloader = DataLoader(dataset, batch_size=batch_size, shuffle=True, collate_fn=dataset.collate_fn)\n    return dataloader\ndef test_dataloader():",
+        "detail": "data",
+        "documentation": {}
+    },
+    {
+        "label": "test_dataloader",
+        "kind": 2,
+        "importPath": "data",
+        "description": "data",
+        "peekOfCode": "def test_dataloader():\n    ap = argparse.ArgumentParser()\n    ap.add_argument(\"--protocol_file\", type=str, default=\"/datab/Dataset/cnsl_real_fake_audio/supcon_cnsl_jan22/protocol.txt\")\n    ap.add_argument(\"--dataset_dir\", type=str, default=\"/datab/Dataset/cnsl_real_fake_audio/supcon_cnsl_jan22/\")\n    ap.add_argument(\"--batch_size\", type=int, default=1)\n    ap.add_argument(\"--dev\", action=\"store_true\")\n    ap.add_argument(\"--eval\", action=\"store_true\")\n    args = ap.parse_args()\n    print(\"Test dataloader\")\n    train_dataloader = get_dataloader(args.protocol_file, args.dataset_dir, args.batch_size, dev=args.dev, eval=args.eval)",
+        "detail": "data",
+        "documentation": {}
+    },
+    {
+        "label": "___author__",
+        "kind": 5,
+        "importPath": "data",
+        "description": "data",
+        "peekOfCode": "___author__ = \"Long Nguyen-Vu\"\n__email__ = \"long@ssu.ac.kr\"\nclass ASVDataset(Dataset):\n    def __init__(self, protocol_file, dataset_dir, dev = False, eval=False):\n        \"\"\"\n        protocol_file: \n            example: `/datab/Dataset/cnsl_real_fake_audio/supcon_cnsl_jan22/protocol.txt`\n            bonafide/LA_T_3424442.wav train - bonafide\n            vocoded/hifigan_LA_T_3424442.wav train - spoof\n        dataset_dir: directory of the dataset",
+        "detail": "data",
+        "documentation": {}
+    },
+    {
+        "label": "__email__",
+        "kind": 5,
+        "importPath": "data",
+        "description": "data",
+        "peekOfCode": "__email__ = \"long@ssu.ac.kr\"\nclass ASVDataset(Dataset):\n    def __init__(self, protocol_file, dataset_dir, dev = False, eval=False):\n        \"\"\"\n        protocol_file: \n            example: `/datab/Dataset/cnsl_real_fake_audio/supcon_cnsl_jan22/protocol.txt`\n            bonafide/LA_T_3424442.wav train - bonafide\n            vocoded/hifigan_LA_T_3424442.wav train - spoof\n        dataset_dir: directory of the dataset\n            example: `/datab/Dataset/cnsl_real_fake_audio/supcon_cnsl_jan22/`",
+        "detail": "data",
+        "documentation": {}
+    },
+    {
+        "label": "device",
+        "kind": 5,
+        "importPath": "inference",
+        "description": "inference",
+        "peekOfCode": "device = torch.device(\"cuda:0\" if torch.cuda.is_available() else \"cpu\")\n# print(device)\n# loading data\nap = argparse.ArgumentParser()\nap.add_argument(\"--protocol_file\", type=str, default=\"/datab/Dataset/cnsl_real_fake_audio/supcon_cnsl_jan22/protocol.txt\")\nap.add_argument(\"--dataset_dir\", type=str, default=\"/datab/Dataset/cnsl_real_fake_audio/supcon_cnsl_jan22/\")\nap.add_argument(\"--config_path\", type=str, default=\"resnet_config.yaml\")\nap.add_argument(\"--batch_size\", type=int, default=16)\nap.add_argument(\"--dev\", action=\"store_true\")\nap.add_argument(\"--eval\", action=\"store_true\")",
+        "detail": "inference",
+        "documentation": {}
+    },
+    {
+        "label": "ap",
+        "kind": 5,
+        "importPath": "inference",
+        "description": "inference",
+        "peekOfCode": "ap = argparse.ArgumentParser()\nap.add_argument(\"--protocol_file\", type=str, default=\"/datab/Dataset/cnsl_real_fake_audio/supcon_cnsl_jan22/protocol.txt\")\nap.add_argument(\"--dataset_dir\", type=str, default=\"/datab/Dataset/cnsl_real_fake_audio/supcon_cnsl_jan22/\")\nap.add_argument(\"--config_path\", type=str, default=\"resnet_config.yaml\")\nap.add_argument(\"--batch_size\", type=int, default=16)\nap.add_argument(\"--dev\", action=\"store_true\")\nap.add_argument(\"--eval\", action=\"store_true\")\nargs = ap.parse_args()\ntrain_dataloader = get_dataloader(args.protocol_file, args.dataset_dir, args.batch_size, dev=args.dev, eval=args.eval)\ndev_dataloader = get_dataloader(args.protocol_file, args.dataset_dir, args.batch_size, dev=True, eval=args.eval)",
+        "detail": "inference",
+        "documentation": {}
+    },
+    {
+        "label": "args",
+        "kind": 5,
+        "importPath": "inference",
+        "description": "inference",
+        "peekOfCode": "args = ap.parse_args()\ntrain_dataloader = get_dataloader(args.protocol_file, args.dataset_dir, args.batch_size, dev=args.dev, eval=args.eval)\ndev_dataloader = get_dataloader(args.protocol_file, args.dataset_dir, args.batch_size, dev=True, eval=args.eval)\neval_dataloader = get_dataloader(args.protocol_file, args.dataset_dir, args.batch_size, dev=False, eval=True)\n#load config\nwith open(args.config_path, 'r') as f_yaml:\n    config = yaml.safe_load(f_yaml)\n# build model\nmodel = resnet34()\nprint(\"ResNet34\")",
+        "detail": "inference",
+        "documentation": {}
+    },
+    {
+        "label": "train_dataloader",
+        "kind": 5,
+        "importPath": "inference",
+        "description": "inference",
+        "peekOfCode": "train_dataloader = get_dataloader(args.protocol_file, args.dataset_dir, args.batch_size, dev=args.dev, eval=args.eval)\ndev_dataloader = get_dataloader(args.protocol_file, args.dataset_dir, args.batch_size, dev=True, eval=args.eval)\neval_dataloader = get_dataloader(args.protocol_file, args.dataset_dir, args.batch_size, dev=False, eval=True)\n#load config\nwith open(args.config_path, 'r') as f_yaml:\n    config = yaml.safe_load(f_yaml)\n# build model\nmodel = resnet34()\nprint(\"ResNet34\")\nmodel = torch.nn.DataParallel(model).cuda()",
+        "detail": "inference",
+        "documentation": {}
+    },
+    {
+        "label": "dev_dataloader",
+        "kind": 5,
+        "importPath": "inference",
+        "description": "inference",
+        "peekOfCode": "dev_dataloader = get_dataloader(args.protocol_file, args.dataset_dir, args.batch_size, dev=True, eval=args.eval)\neval_dataloader = get_dataloader(args.protocol_file, args.dataset_dir, args.batch_size, dev=False, eval=True)\n#load config\nwith open(args.config_path, 'r') as f_yaml:\n    config = yaml.safe_load(f_yaml)\n# build model\nmodel = resnet34()\nprint(\"ResNet34\")\nmodel = torch.nn.DataParallel(model).cuda()\n# define optimizer",
+        "detail": "inference",
+        "documentation": {}
+    },
+    {
+        "label": "eval_dataloader",
+        "kind": 5,
+        "importPath": "inference",
+        "description": "inference",
+        "peekOfCode": "eval_dataloader = get_dataloader(args.protocol_file, args.dataset_dir, args.batch_size, dev=False, eval=True)\n#load config\nwith open(args.config_path, 'r') as f_yaml:\n    config = yaml.safe_load(f_yaml)\n# build model\nmodel = resnet34()\nprint(\"ResNet34\")\nmodel = torch.nn.DataParallel(model).cuda()\n# define optimizer\noptimizer_name = config['model']['optimizer']",
+        "detail": "inference",
+        "documentation": {}
+    },
+    {
+        "label": "model",
+        "kind": 5,
+        "importPath": "inference",
+        "description": "inference",
+        "peekOfCode": "model = resnet34()\nprint(\"ResNet34\")\nmodel = torch.nn.DataParallel(model).cuda()\n# define optimizer\noptimizer_name = config['model']['optimizer']\nlr = config['model']['lr']\nmomentum = config['model'].get('momentum', 0.9)  # Default value is 0.9\nif optimizer_name.lower() == 'adam':\n    optimizer = optim.Adam(model.parameters(), lr=lr)\nelif optimizer_name.lower() == 'adadelta':",
+        "detail": "inference",
+        "documentation": {}
+    },
+    {
+        "label": "model",
+        "kind": 5,
+        "importPath": "inference",
+        "description": "inference",
+        "peekOfCode": "model = torch.nn.DataParallel(model).cuda()\n# define optimizer\noptimizer_name = config['model']['optimizer']\nlr = config['model']['lr']\nmomentum = config['model'].get('momentum', 0.9)  # Default value is 0.9\nif optimizer_name.lower() == 'adam':\n    optimizer = optim.Adam(model.parameters(), lr=lr)\nelif optimizer_name.lower() == 'adadelta':\n    optimizer = optim.Adadelta(model.parameters(), lr=lr)\nelif optimizer_name.lower() == 'sgd':",
+        "detail": "inference",
+        "documentation": {}
+    },
+    {
+        "label": "optimizer_name",
+        "kind": 5,
+        "importPath": "inference",
+        "description": "inference",
+        "peekOfCode": "optimizer_name = config['model']['optimizer']\nlr = config['model']['lr']\nmomentum = config['model'].get('momentum', 0.9)  # Default value is 0.9\nif optimizer_name.lower() == 'adam':\n    optimizer = optim.Adam(model.parameters(), lr=lr)\nelif optimizer_name.lower() == 'adadelta':\n    optimizer = optim.Adadelta(model.parameters(), lr=lr)\nelif optimizer_name.lower() == 'sgd':\n    optimizer = optim.SGD(model.parameters(), lr=lr, momentum=momentum)\nelse:",
+        "detail": "inference",
+        "documentation": {}
+    },
+    {
+        "label": "lr",
+        "kind": 5,
+        "importPath": "inference",
+        "description": "inference",
+        "peekOfCode": "lr = config['model']['lr']\nmomentum = config['model'].get('momentum', 0.9)  # Default value is 0.9\nif optimizer_name.lower() == 'adam':\n    optimizer = optim.Adam(model.parameters(), lr=lr)\nelif optimizer_name.lower() == 'adadelta':\n    optimizer = optim.Adadelta(model.parameters(), lr=lr)\nelif optimizer_name.lower() == 'sgd':\n    optimizer = optim.SGD(model.parameters(), lr=lr, momentum=momentum)\nelse:\n    optimizer = optim.SGD(model.parameters(), lr=lr, momentum=momentum)",
+        "detail": "inference",
+        "documentation": {}
+    },
+    {
+        "label": "momentum",
+        "kind": 5,
+        "importPath": "inference",
+        "description": "inference",
+        "peekOfCode": "momentum = config['model'].get('momentum', 0.9)  # Default value is 0.9\nif optimizer_name.lower() == 'adam':\n    optimizer = optim.Adam(model.parameters(), lr=lr)\nelif optimizer_name.lower() == 'adadelta':\n    optimizer = optim.Adadelta(model.parameters(), lr=lr)\nelif optimizer_name.lower() == 'sgd':\n    optimizer = optim.SGD(model.parameters(), lr=lr, momentum=momentum)\nelse:\n    optimizer = optim.SGD(model.parameters(), lr=lr, momentum=momentum)\nbest_dev_loss = np.inf",
+        "detail": "inference",
+        "documentation": {}
+    },
+    {
+        "label": "best_dev_loss",
+        "kind": 5,
+        "importPath": "inference",
+        "description": "inference",
+        "peekOfCode": "best_dev_loss = np.inf\n# load pre-trained model\ncheckpoint_path = os.path.join('./checkpoint', f\"{config['model']['arc']}_lfcc.pth\")\nif os.path.isfile(checkpoint_path):\n    state = torch.load(checkpoint_path)\n    print(f'Load pre-trained model of {config[\"model\"][\"arc\"]}\\n')\n    print(state)\n    best_dev_loss = state['acc']\n# training with early stopping\nepoch = config['model']['epoch']",
+        "detail": "inference",
+        "documentation": {}
+    },
+    {
+        "label": "checkpoint_path",
+        "kind": 5,
+        "importPath": "inference",
+        "description": "inference",
+        "peekOfCode": "checkpoint_path = os.path.join('./checkpoint', f\"{config['model']['arc']}_lfcc.pth\")\nif os.path.isfile(checkpoint_path):\n    state = torch.load(checkpoint_path)\n    print(f'Load pre-trained model of {config[\"model\"][\"arc\"]}\\n')\n    print(state)\n    best_dev_loss = state['acc']\n# training with early stopping\nepoch = config['model']['epoch']\nepochs = config['model']['epochs']\niteration = config['model']['iteration']",
+        "detail": "inference",
+        "documentation": {}
+    },
+    {
+        "label": "epoch",
+        "kind": 5,
+        "importPath": "inference",
+        "description": "inference",
+        "peekOfCode": "epoch = config['model']['epoch']\nepochs = config['model']['epochs']\niteration = config['model']['iteration']\npatience = config['model']['patience']\nlog_interval = config['model']['log_interval']\nprint('\\nStart training...')\nwhile (epoch < epochs + 1) and (iteration < patience):\n    train(train_dataloader, model, optimizer, epoch, True, log_interval)\n    train_loss = test(train_dataloader, model, True, mode='Train loss')\n    dev_loss = test(dev_dataloader, model, True, mode='dev loss')",
+        "detail": "inference",
+        "documentation": {}
+    },
+    {
+        "label": "epochs",
+        "kind": 5,
+        "importPath": "inference",
+        "description": "inference",
+        "peekOfCode": "epochs = config['model']['epochs']\niteration = config['model']['iteration']\npatience = config['model']['patience']\nlog_interval = config['model']['log_interval']\nprint('\\nStart training...')\nwhile (epoch < epochs + 1) and (iteration < patience):\n    train(train_dataloader, model, optimizer, epoch, True, log_interval)\n    train_loss = test(train_dataloader, model, True, mode='Train loss')\n    dev_loss = test(dev_dataloader, model, True, mode='dev loss')\n    if dev_loss > best_dev_loss:",
+        "detail": "inference",
+        "documentation": {}
+    },
+    {
+        "label": "iteration",
+        "kind": 5,
+        "importPath": "inference",
+        "description": "inference",
+        "peekOfCode": "iteration = config['model']['iteration']\npatience = config['model']['patience']\nlog_interval = config['model']['log_interval']\nprint('\\nStart training...')\nwhile (epoch < epochs + 1) and (iteration < patience):\n    train(train_dataloader, model, optimizer, epoch, True, log_interval)\n    train_loss = test(train_dataloader, model, True, mode='Train loss')\n    dev_loss = test(dev_dataloader, model, True, mode='dev loss')\n    if dev_loss > best_dev_loss:\n        iteration += 1",
+        "detail": "inference",
+        "documentation": {}
+    },
+    {
+        "label": "patience",
+        "kind": 5,
+        "importPath": "inference",
+        "description": "inference",
+        "peekOfCode": "patience = config['model']['patience']\nlog_interval = config['model']['log_interval']\nprint('\\nStart training...')\nwhile (epoch < epochs + 1) and (iteration < patience):\n    train(train_dataloader, model, optimizer, epoch, True, log_interval)\n    train_loss = test(train_dataloader, model, True, mode='Train loss')\n    dev_loss = test(dev_dataloader, model, True, mode='dev loss')\n    if dev_loss > best_dev_loss:\n        iteration += 1\n        print('\\nLoss was not improved, iteration {0}\\n'.format(str(iteration)))",
+        "detail": "inference",
+        "documentation": {}
+    },
+    {
+        "label": "log_interval",
+        "kind": 5,
+        "importPath": "inference",
+        "description": "inference",
+        "peekOfCode": "log_interval = config['model']['log_interval']\nprint('\\nStart training...')\nwhile (epoch < epochs + 1) and (iteration < patience):\n    train(train_dataloader, model, optimizer, epoch, True, log_interval)\n    train_loss = test(train_dataloader, model, True, mode='Train loss')\n    dev_loss = test(dev_dataloader, model, True, mode='dev loss')\n    if dev_loss > best_dev_loss:\n        iteration += 1\n        print('\\nLoss was not improved, iteration {0}\\n'.format(str(iteration)))\n    else:",
+        "detail": "inference",
+        "documentation": {}
+    },
+    {
+        "label": "train",
+        "kind": 2,
+        "importPath": "train",
+        "description": "train",
+        "peekOfCode": "def train(loader, model, optimizer, epoch, cuda, log_interval, verbose=True):\n    \"\"\"\n    This function is used to train the model.\n    \"\"\"\n    model.train()\n    global_epoch_loss = 0\n    for batch_idx, (data, target) in enumerate(loader):\n        if cuda:\n            data, target = data.cuda(), target.cuda()\n        else:",
+        "detail": "train",
+        "documentation": {}
+    },
+    {
+        "label": "test",
+        "kind": 2,
+        "importPath": "train",
+        "description": "train",
+        "peekOfCode": "def test(loader, model, cuda, mode, verbose=True):\n    \"\"\"\n    This function is used to test the model.\n    \"\"\"\n    model.eval()\n    xx_loss = 0\n    correct = 0\n    for data, target in loader:\n        if cuda:\n            data, target = data.cuda(), target.cuda()",
+        "detail": "train",
+        "documentation": {}
+    }
+]
