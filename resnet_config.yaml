@@ -1,0 +1,21 @@
+model:
+  optimizer : 'adadelta' # adadelta adam SGD
+  lr : 0.00001 # to do : adaptive lr
+  epochs : 20
+  epoch : 1
+  momentum : 0.9 # for SGD
+
+  iteration : 0
+  patience : 5 # for early stopping
+  log_interval : 10
+
+  seed : 1234  # random seed
+  batch_size : 64 
+  test_batch_size: 64
+  arc : 'ResNet'
+
+  #sound setting
+  window_size : 0.01   # 0.02
+  window_stride : 0.01 # 0.01
+  window_type : 'hamming'
+  normalize : True
