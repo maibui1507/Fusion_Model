@@ -9,6 +9,14 @@
         "documentation": {}
     },
     {
+        "label": "Parameter",
+        "importPath": "torch.nn",
+        "description": "torch.nn",
+        "isExtraImport": true,
+        "detail": "torch.nn",
+        "documentation": {}
+    },
+    {
         "label": "DataParallel",
         "importPath": "torch.nn",
         "description": "torch.nn",
@@ -59,6 +67,38 @@
         "importPath": "numpy",
         "description": "numpy",
         "detail": "numpy",
+        "documentation": {}
+    },
+    {
+        "label": "abstractmethod",
+        "importPath": "abc",
+        "description": "abc",
+        "isExtraImport": true,
+        "detail": "abc",
+        "documentation": {}
+    },
+    {
+        "label": "Variable",
+        "importPath": "torch.autograd",
+        "description": "torch.autograd",
+        "isExtraImport": true,
+        "detail": "torch.autograd",
+        "documentation": {}
+    },
+    {
+        "label": "Variable",
+        "importPath": "torch.autograd",
+        "description": "torch.autograd",
+        "isExtraImport": true,
+        "detail": "torch.autograd",
+        "documentation": {}
+    },
+    {
+        "label": "Variable",
+        "importPath": "torch.autograd",
+        "description": "torch.autograd",
+        "isExtraImport": true,
+        "detail": "torch.autograd",
         "documentation": {}
     },
     {
@@ -375,14 +415,6 @@
         "documentation": {}
     },
     {
-        "label": "Variable",
-        "importPath": "torch.autograd",
-        "description": "torch.autograd",
-        "isExtraImport": true,
-        "detail": "torch.autograd",
-        "documentation": {}
-    },
-    {
         "label": "BasicBlock",
         "kind": 6,
         "importPath": "model.resnet",
@@ -479,6 +511,177 @@
         "description": "model.resnet",
         "peekOfCode": "model_urls = {\n    'resnet18': 'https://download.pytorch.org/models/resnet18-5c106cde.pth',\n    'resnet34': 'https://download.pytorch.org/models/resnet34-333f7ec4.pth',\n    'resnet50': 'https://download.pytorch.org/models/resnet50-19c8e357.pth',\n    'resnet101': 'https://download.pytorch.org/models/resnet101-5d3b4d8f.pth',\n    'resnet152': 'https://download.pytorch.org/models/resnet152-b121ed2d.pth',\n}\ndef conv3x3(in_planes, out_planes, stride=1):\n    \"\"\"3x3 convolution with padding\"\"\"\n    return nn.Conv2d(in_planes, out_planes, kernel_size=3, stride=stride,",
         "detail": "model.resnet",
+        "documentation": {}
+    },
+    {
+        "label": "BaseModel",
+        "kind": 6,
+        "importPath": "models.base_model",
+        "description": "models.base_model",
+        "peekOfCode": "class BaseModel(nn.Module):\n    \"\"\"\n    Base class for all models\n    \"\"\"\n    @abstractmethod\n    def forward(self, *input):\n        \"\"\"\n        Forward pass logic\n        :return: Model output\n        \"\"\"",
+        "detail": "models.base_model",
+        "documentation": {}
+    },
+    {
+        "label": "AngleLinear",
+        "kind": 6,
+        "importPath": "models.lcnn",
+        "description": "models.lcnn",
+        "peekOfCode": "class AngleLinear(nn.Module):\n    def __init__(self, in_features, out_features, m = 4, phiflag=True):\n        super(AngleLinear, self).__init__()\n        self.in_features = in_features\n        self.out_features = out_features\n        self.weight = Parameter(torch.Tensor(in_features, out_features))\n        self.weight.data.uniform_(-1, 1).renorm_(2,1,1e-5).mul_(1e5)\n        self.phiflag = phiflag\n        self.m = m\n        self.mlambda = [",
+        "detail": "models.lcnn",
+        "documentation": {}
+    },
+    {
+        "label": "AngleLoss",
+        "kind": 6,
+        "importPath": "models.lcnn",
+        "description": "models.lcnn",
+        "peekOfCode": "class AngleLoss(nn.Module):\n    def __init__(self, gamma=0):\n        super(AngleLoss, self).__init__()\n        self.gamma   = gamma\n        self.it = 0\n        self.LambdaMin = 5.0\n        self.LambdaMax = 1500.0\n        self.lamb = 1500.0\n    def forward(self, input, target):\n        self.it += 1",
+        "detail": "models.lcnn",
+        "documentation": {}
+    },
+    {
+        "label": "mfm",
+        "kind": 6,
+        "importPath": "models.lcnn",
+        "description": "models.lcnn",
+        "peekOfCode": "class mfm(nn.Module):\n    \"\"\"Max-Feature-Map.\"\"\"\n    def __init__(self, in_channels, out_channels, kernel_size=3, stride=1, padding=1, type=1, dp_out=0.75):\n        super(mfm, self).__init__()\n        self.out_channels = out_channels\n        if type == 1:\n            self.filter = nn.Conv2d(in_channels, 2*out_channels, kernel_size=kernel_size, stride=stride, padding=padding)\n        else:\n            self.filter = nn.Sequential(\n                nn.Linear(in_channels, 2*out_channels),",
+        "detail": "models.lcnn",
+        "documentation": {}
+    },
+    {
+        "label": "group",
+        "kind": 6,
+        "importPath": "models.lcnn",
+        "description": "models.lcnn",
+        "peekOfCode": "class group(nn.Module):\n    def __init__(self, in_channels, out_channels, kernel_size, stride, padding):\n        super(group, self).__init__()\n        self.conv_a = mfm(in_channels, in_channels, 1, 1, 0)\n        self.bn = nn.BatchNorm2d(in_channels)\n        self.conv = mfm(in_channels, out_channels, kernel_size, stride, padding)\n    def forward(self, x):\n        x = self.conv_a(x)\n        x = self.conv(x)\n        return x",
+        "detail": "models.lcnn",
+        "documentation": {}
+    },
+    {
+        "label": "LCNN",
+        "kind": 6,
+        "importPath": "models.lcnn",
+        "description": "models.lcnn",
+        "peekOfCode": "class LCNN(nn.Module):\n    def __init__(self, c_s=[32, 48, 64, 32, 32, 80], asoftmax=True, phiflag=True, num_classes=2): # inputs shape:[863,600,1]\n        super(LCNN, self).__init__() \n        # small [8, 12, 12, 4, 4, 32]\n        self.c_s = c_s\n        self.asoftmax = asoftmax\n        self.layer1 = nn.Sequential(\n            mfm(1, c_s[0], 5, 1, 2),\n            nn.MaxPool2d(kernel_size=2, stride=2, ceil_mode=False))  #shape[431,300,c_s[0]]\n        self.layer2 = nn.Sequential(",
+        "detail": "models.lcnn",
+        "documentation": {}
+    },
+    {
+        "label": "mypsi",
+        "kind": 2,
+        "importPath": "models.lcnn",
+        "description": "models.lcnn",
+        "peekOfCode": "def mypsi(x,m):\n    x = x * m\n    return 1-x**2/math.factorial(2)+x**4/math.factorial(4)-x**6/math.factorial(6) + \\\n            x**8/math.factorial(8) - x**9/math.factorial(9)\nclass AngleLinear(nn.Module):\n    def __init__(self, in_features, out_features, m = 4, phiflag=True):\n        super(AngleLinear, self).__init__()\n        self.in_features = in_features\n        self.out_features = out_features\n        self.weight = Parameter(torch.Tensor(in_features, out_features))",
+        "detail": "models.lcnn",
+        "documentation": {}
+    },
+    {
+        "label": "lcnn_net",
+        "kind": 2,
+        "importPath": "models.lcnn",
+        "description": "models.lcnn",
+        "peekOfCode": "def lcnn_net(**kwargs):\n    model = LCNN(**kwargs)\n    return model",
+        "detail": "models.lcnn",
+        "documentation": {}
+    },
+    {
+        "label": "KDloss",
+        "kind": 6,
+        "importPath": "models.loss",
+        "description": "models.loss",
+        "peekOfCode": "class KDloss(nn.Module):\n    def __init__(self):\n        super(KDloss, self).__init__()\n        self.loss = nn.KLDivLoss(reduction='batchmean')\n    def forward(self, y, labels, student_scores=None, teacher_scores=None, T=1, alpha=0.5, eval=False):\n        # y is the output of the student network\n        # dimension of y is (batch_size=64, num_classes=2)\n        # cross_entropy is the same as nll_loss with log_softmax\n        if eval:\n            return F.cross_entropy(torch.exp(y), labels) ",
+        "detail": "models.loss",
+        "documentation": {}
+    },
+    {
+        "label": "NllLoss",
+        "kind": 6,
+        "importPath": "models.loss",
+        "description": "models.loss",
+        "peekOfCode": "class NllLoss(nn.Module):\n    def __init__(self):\n        super(NllLoss, self).__init__()\n        self.loss = nn.NLLLoss()\n    def forward(self, output, target):\n        return self.loss(output[0], target)\nclass AngleLoss(nn.Module):\n    def __init__(self, gamma=0):\n        super(AngleLoss, self).__init__()\n        self.gamma   = gamma",
+        "detail": "models.loss",
+        "documentation": {}
+    },
+    {
+        "label": "AngleLoss",
+        "kind": 6,
+        "importPath": "models.loss",
+        "description": "models.loss",
+        "peekOfCode": "class AngleLoss(nn.Module):\n    def __init__(self, gamma=0):\n        super(AngleLoss, self).__init__()\n        self.gamma   = gamma\n        self.it = 0\n        self.LambdaMin = 5.0\n        self.LambdaMax = 1500.0\n        self.lamb = 1500.0\n    def forward(self, input, target, eval=False):\n        self.it += 1",
+        "detail": "models.loss",
+        "documentation": {}
+    },
+    {
+        "label": "accuracy_topk",
+        "kind": 2,
+        "importPath": "models.metric",
+        "description": "models.metric",
+        "peekOfCode": "def accuracy_topk(output, target, k=3):\n    with torch.no_grad():\n        pred = torch.topk(output, k, dim=1)[1]\n        assert pred.shape[0] == len(target)\n        correct = 0\n        for i in range(k):\n            correct += torch.sum(pred[:, i] == target).item()\n    return correct / len(target)\ndef accuracy(output, target):\n    with torch.no_grad():",
+        "detail": "models.metric",
+        "documentation": {}
+    },
+    {
+        "label": "accuracy",
+        "kind": 2,
+        "importPath": "models.metric",
+        "description": "models.metric",
+        "peekOfCode": "def accuracy(output, target):\n    with torch.no_grad():\n        pred = torch.argmax(output, dim=1)\n        assert pred.shape[0] == len(target)\n        correct = 0\n        correct += torch.sum(pred == target).item()\n    return correct / len(target)\n# def accuracy(output, target, topk=(1,)):\n#     \"\"\" Computes the accuracy over the k top predictions for the specified values of k \"\"\"\n#     with torch.no_grad():",
+        "detail": "models.metric",
+        "documentation": {}
+    },
+    {
+        "label": "SELayer",
+        "kind": 6,
+        "importPath": "models.senet",
+        "description": "models.senet",
+        "peekOfCode": "class SELayer(nn.Module):\n    def __init__(self, channel, reduction=16):\n        super(SELayer, self).__init__()\n        self.avg_pool = nn.AdaptiveAvgPool2d(1) # F_squeeze \n        self.fc = nn.Sequential(\n            nn.Linear(channel, channel // reduction, bias=False),\n            nn.ReLU(inplace=True),\n            nn.Linear(channel // reduction, channel, bias=False),\n            nn.Sigmoid()\n        )",
+        "detail": "models.senet",
+        "documentation": {}
+    },
+    {
+        "label": "SEBasicBlock",
+        "kind": 6,
+        "importPath": "models.senet",
+        "description": "models.senet",
+        "peekOfCode": "class SEBasicBlock(nn.Module):\n    expansion = 1\n    def __init__(self, inplanes, planes, stride=1, downsample=None, reduction=16):\n        super(SEBasicBlock, self).__init__()\n        self.conv1 = conv3x3(inplanes, planes, stride)\n        self.bn1 = nn.BatchNorm2d(planes)\n        self.relu = nn.ReLU(inplace=True)\n        self.conv2 = conv3x3(planes, planes, 1)\n        self.bn2 = nn.BatchNorm2d(planes)\n        self.se = SELayer(planes, reduction)",
+        "detail": "models.senet",
+        "documentation": {}
+    },
+    {
+        "label": "ResNet",
+        "kind": 6,
+        "importPath": "models.senet",
+        "description": "models.senet",
+        "peekOfCode": "class ResNet(nn.Module):\n    \"\"\" basic ResNet class: https://github.com/pytorch/vision/blob/master/torchvision/models/resnet.py \"\"\"\n    def __init__(self, block, layers, channels=[16, 16, 32, 64, 128], num_classes=2, focal_loss=False):\n        self.inplanes = channels[0]\n        self.focal_loss = focal_loss \n        super(ResNet, self).__init__()\n        self.conv1 = nn.Conv2d(1, channels[0], kernel_size=7, stride=2, padding=3, bias=False)\n        self.bn1 = nn.BatchNorm2d(channels[0])\n        self.relu = nn.ReLU(inplace=True)\n        self.maxpool = nn.MaxPool2d(kernel_size=3, stride=2, padding=1)",
+        "detail": "models.senet",
+        "documentation": {}
+    },
+    {
+        "label": "conv3x3",
+        "kind": 2,
+        "importPath": "models.senet",
+        "description": "models.senet",
+        "peekOfCode": "def conv3x3(in_planes, out_planes, stride=1):\n    \"\"\"3x3 convolution with padding\"\"\"\n    return nn.Conv2d(in_planes, out_planes, kernel_size=3, stride=stride,\n                     padding=1, bias=False)\nclass SELayer(nn.Module):\n    def __init__(self, channel, reduction=16):\n        super(SELayer, self).__init__()\n        self.avg_pool = nn.AdaptiveAvgPool2d(1) # F_squeeze \n        self.fc = nn.Sequential(\n            nn.Linear(channel, channel // reduction, bias=False),",
+        "detail": "models.senet",
+        "documentation": {}
+    },
+    {
+        "label": "se_resnet34",
+        "kind": 2,
+        "importPath": "models.senet",
+        "description": "models.senet",
+        "peekOfCode": "def se_resnet34(**kwargs):\n    model = ResNet(SEBasicBlock, [3, 4, 6, 3], **kwargs)\n    return model\ndef se_resnet12(**kwargs):\n    model = ResNet(SEBasicBlock, [1, 2, 3, 1], **kwargs)\n    return model",
+        "detail": "models.senet",
+        "documentation": {}
+    },
+    {
+        "label": "se_resnet12",
+        "kind": 2,
+        "importPath": "models.senet",
+        "description": "models.senet",
+        "peekOfCode": "def se_resnet12(**kwargs):\n    model = ResNet(SEBasicBlock, [1, 2, 3, 1], **kwargs)\n    return model",
+        "detail": "models.senet",
         "documentation": {}
     },
     {
